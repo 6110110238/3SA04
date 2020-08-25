@@ -1,6 +1,6 @@
 import Weather from "../components/Weather";
 import React from 'react' ;
-import {  Text, View, StatusBar } from 'react-native' ;
+import {  View } from 'react-native' ;
 
 export default function WeatherScreen({route}) {
     return (
