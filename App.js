@@ -1,22 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Weather from './components/Weather';
-export default function App() {
- const doIt = () => {
- console.log("Hello from console")
- }
- return (
- <View style={styles.container}>
- <Text onPress={doIt}>Hello world</Text>
- <StatusBar style="auto" />
- <View style={styles.container}>
- <Weather zipCode="90110"/>
- <StatusBar style="auto" />
- </View>
+import ZipCodeScreen from './screen/ZipCodeScreen';
 
- </View>
+
+
+
+const Stack = createStackNavigator();
+export default function App() {
+ return (
+ <NavigationContainer>
+ <Stack.Navigator>
+ <Stack.Screen name="Home" component={ZipCodeScreen} />
+ </Stack.Navigator>
+ </NavigationContainer>
  );
+
 }
 const styles = StyleSheet.create({
  container: {
