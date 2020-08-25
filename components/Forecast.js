@@ -7,12 +7,13 @@ export default function Forecast(props) {
         <Text style = {styles.wbackground}>{props.main}</Text>
         <Text style = {styles.wbackground}>{props.description}</Text>
         <Text style = {styles.wbackground}>{props.temp} °C</Text>
+        <Text style={styles.testst}> Feel like: {props.feels_like} °C</Text>
         </View>
         
         );
        }
-       const styles = StyleSheet.create({
-           wbackground : {
+        const styles = StyleSheet.create({
+           /*wbackground : {
      
        backgroundColor : 'blue' ,
        alignItems : 'stretch' ,
@@ -23,5 +24,8 @@ export default function Forecast(props) {
        textAlignVertical : 'center' ,
        opacity : 0.75 ,
        
-    } ,
+    } , */
+            textsize: {
+            fontSize : 30,
+        }
    });

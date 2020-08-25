@@ -6,6 +6,7 @@ export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: "main",
         description: "description",
+        feels_like:0,
         temp: 0,
     })
     useEffect(() => {
